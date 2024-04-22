@@ -17,13 +17,7 @@ async function getData(slug: string) {
   return data;
 }
 
-export default async function page({
-  params,
-  index,
-}: {
-  params: { slug: string };
-  index: number;
-}) {
+export default async function page({ params }: { params: { slug: string } }) {
   const data: {
     cuurentSlug: string;
     title: string;
@@ -32,7 +26,6 @@ export default async function page({
   } = await getData(params.slug);
   return (
     <div
-      key={index}
       className="max-w-screen-md w-11/12 mx-auto flex flex-col gap-8 justify-center items-center py-10 md:py-20"
     >
       <span className="text-xl font-medium text-[#2d73ff]">

@@ -4,13 +4,11 @@ import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Card({
-  key,
   title,
   image,
   smallDescription,
   slug,
 }: {
-  key: number;
   title: string;
   image: string;
   slug: string;
@@ -18,7 +16,6 @@ export default function Card({
 }) {
   return (
     <div
-      key={key}
       className={`w-fit flex flex-wrap border border-[#7777770e] dark:border-[#f3f3f31f] shadow-md dark:shadow-[#f3f3f32a] rounded-xl `}
     >
       <Image
